@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2011 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+    <string name="hello">Hello World, NewsReaderActivity!</string>
+    <string name="app_name">Mediathek 1</string>
+    <string name="ok">OK</string>
+    <string name="info_popup_changelog">Changelog</string>
+    <string name="changelog">Changelog</string>
+    <string name="infotext">
+        <![CDATA[
+        <p>Mediathek 1 ist eine alternative native Oberfläche für die Inhalte der ARD Mediathek. Mediathek 1 entstand als Android-Lernprojekt und um für mich selbst eine bessere Oberfläche zu den Inhalten der ARD Mediathek zur Verfügung zu haben.<p>
+        <p>Mediathek 1 ist Open Source, der Quelltext ist frei verfügbar unter https://github.com/jprberlin/mediathek1. Wer möchte kann dort auch Fehler reporten oder Verbesserungen und Erweiterungen am Programmcode zur Verfügung stellen (Pull Request).</p>
+        <p>Mediathek 1 ist kein offizielles Angebot der ARD. Bitte beachten Sie die Nutzungshinweise und Bedingungen der ARD Mediathek unter http://m.daserste.de</p>
+        <p>Tipp: Wählen Sie die Qualität so gut wie möglich, aber eben auch nicht schneller als der Internetanschluss über den Sie surfen. Wenn die Filme beim Abspielen stocken, so versuchen Sie eine geringere Qualität auszuwählen. Achten Sie darauf das Filme viel Datenvolumen verbrauchen und hierdurch ggf. Kosten entstehen können. </p>
+        <p>Die Qualität der Livestreams hängt stark von Internetverbindung und verwendetem Player ab."
+        <p>Danke an Sasche Huth für Tipps zum Einstieg in die Android Entwicklung.<p/>
+        <p><strong>Verwendete Bibliotheken:</strong><br />
+        - Android Smart Image View<br />
+        - Square Event Bus<br />
+        - Action Bar Sherlock<br />
+        - Android Async Http<br />
+        - Android-ViewPagerIndicator</p>    
+        ]]>
+    </string>
+    <string name="qualitaet">Qualität:</string>
+    <string name="dauer_">Dauer:</string>
+    <string name="search_label">Suche</string>
+    <string name="search_hint">in der Mediathek</string>
+    <string name="jetzt_ansehen">Jetzt ansehen</string>
+    <string name="jetzt_stream_ansehen">Livestream ansehen</string>
+    <string name="pref_hide_copyurl_button">Verstecke "Kopieren" Button</string>
+    <string name="pref_hide_copyurl_button_summ">Ermöglicht eine kompaktere Darstellung</string>
+    <string name="pref_always_show_long_desc">Zeige lange Beschreibungen</string>
+    <string name="pref_always_show_long_desc_summ">Zeigt lange Beschreibungen, ohne dass man auf den Text klicken muß</string>
+    <string name="pref_hide_live_entries_desc">Verstecke Live Einträge</string>
+    <string name="pref_hide_live_entries_desc_summ">Live Einträge werden versteckt</string>
+    <string name="pref_show_download_button_desc">Aktiviere Download Funktion</string>
+    <string name="pref_show_download_button_summ">Aktiviere Funktion um Beiträge zwischen zu speichern um Sie später zu schauen</string>
+    <string name="pref_reverse_list_order_desc">Umgedrehte Listenansicht</string>
+    <string name="pref_reverse_list_order_summ">Zeigt Sendungen am Morgen am Ende der Listen</string>
+    <string name="pref_display_title">Darstellung</string>
+    <string name="teaserbild">Teaserbild</string>
+
+    
+</resources>

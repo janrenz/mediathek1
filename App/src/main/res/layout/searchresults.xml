@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+        <!-- BEGIN_INCLUDE(all) -->
+<org.holoeverywhere.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:paddingTop="1dp"
+              android:paddingBottom="1dp"
+              android:orientation="vertical">
+    <GridView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchResultGrid"
+            tools:listitem="@layout/headline_item"
+
+            android:visibility="gone">
+    </GridView>
+    <org.holoeverywhere.widget.ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/progressBar" android:layout_gravity="center"/>
+    <org.holoeverywhere.widget.TextView
+        android:id="@+id/noresultsmsg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:visibility="gone"
+        />
+</org.holoeverywhere.widget.LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File created by the Android Action Bar Style Generator
+
+     Copyright (C) 2011 The Android Open Source Project
+     Copyright (C) 2012 readyState Software Ltd
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+<!--  -->
+    <style name="Theme.Mediathek" parent="@style/Holo.Theme.Light.DarkActionBar">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_mediathek</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Mediathek</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Mediathek</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Mediathek</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Mediathek</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Mediathek</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_mediathek</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_mediathek</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Mediathek</item>
+
+        <!-- Light.DarkActionBar specific -->
+        <item name="android:actionBarWidgetTheme">@style/Theme.Mediathek.Widget</item>
+
+
+    </style>
+    <style name="ActionBar.Solid.Mediathek" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/ab_solid_mediathek</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_mediathek</item>
+        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_mediathek</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Mediathek</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Mediathek" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_mediathek</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Mediathek</item>
+    </style>
+
+    <style name="PopupMenu.Mediathek" parent="@android:style/Widget.Holo.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_mediathek</item>
+    </style>
+
+    <style name="DropDownListView.Mediathek" parent="@android:style/Widget.Holo.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_mediathek</item>
+    </style>
+    <style name="ActionBarTabStyle.Mediathek" parent="@android:style/Widget.Holo.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_mediathek</item>
+    </style>
+    <style name="DropDownNav.Mediathek" parent="@android:style/Widget.Holo.Spinner">
+        <item name="android:background">@drawable/spinner_background_ab_mediathek</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_mediathek</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_mediathek</item>
+    </style>
+
+    <style name="ProgressBar.Mediathek" parent="@android:style/Widget.Holo.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_mediathek</item>
+    </style>
+
+    <style name="ActionButton.CloseMode.Mediathek" parent="@android:style/Widget.Holo.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_mediathek</item>
+    </style>
+
+
+</resources>

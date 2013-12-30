@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff" >
+
+    <org.holoeverywhere.widget.LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <org.holoeverywhere.widget.FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/thumbnail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity=""
+
+                android:background="#EEEEEE"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/teaserbild"
+                android:scaleType="centerCrop" />
+
+            <org.holoeverywhere.widget.LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left"
+                android:orientation="vertical" >
+ <org.holoeverywhere.widget.TextView
+                    android:id="@+id/senderinfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/semitransparentGrey"
+                    android:paddingLeft="5dp"
+                     android:paddingRight="5dp" android:paddingTop="2dp"
+                     
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+                <org.holoeverywhere.widget.TextView
+                    android:id="@+id/headline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/semitransparentGrey"
+                    android:paddingLeft="5dp"
+                     android:paddingBottom="5dp"
+                     android:paddingRight="5dp"
+                    android:paddingTop="0dp"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/white" />
+               
+
+            </org.holoeverywhere.widget.LinearLayout>
+        </org.holoeverywhere.widget.FrameLayout>
+
+        <org.holoeverywhere.widget.TextView
+            android:id="@+id/headline1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+              android:paddingTop="5dp"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <org.holoeverywhere.widget.LinearLayout
+            android:id="@+id/hideAfterLoadItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <org.holoeverywhere.widget.ProgressBar
+                android:id="@+id/laodingProgressBar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </org.holoeverywhere.widget.LinearLayout>
+
+        <org.holoeverywhere.widget.LinearLayout
+            android:id="@+id/showAfterLoadItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="invisible" >
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="0dp" >
+
+                <TableRow
+                    android:id="@+id/tableRow1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <org.holoeverywhere.widget.TextView
+                        android:id="@+id/qualityText"
+                        android:layout_width="96dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/qualitaet"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <org.holoeverywhere.widget.Spinner
+                        android:id="@+id/qualitySpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                         />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <org.holoeverywhere.widget.TextView
+                        android:layout_width="96dp"
+                        android:layout_height="match_parent"
+                        android:text="@string/dauer_"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <org.holoeverywhere.widget.TextView
+                        android:id="@+id/durationText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="12dp"
+                        android:text=""
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+            </TableLayout>
+
+            <org.holoeverywhere.widget.Button
+                android:id="@+id/buttonWatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#235fa0"
+                android:text="@string/jetzt_ansehen"
+                android:textColor="#FFFFFF" />
+
+            <org.holoeverywhere.widget.Button
+                android:id="@+id/buttonCopy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="15dp"
+                android:background="#aaaaaa"
+                android:text="Film Url kopieren"
+                android:textColor="#FFFFFF" />
+            <!--
+            <org.holoeverywhere.widget.Button
+                    android:id="@+id/buttonDownload"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#aaaaaa"
+                    android:text="Später anschauen"
+                    android:textColor="#FFFFFF" />-->
+        </org.holoeverywhere.widget.LinearLayout>
+    </org.holoeverywhere.widget.LinearLayout>
+
+</ScrollView>

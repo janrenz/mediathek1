@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog>
+      <release version="0.2" versioncode="2">
+        <change>Unterstützung für Android-Version ab 2.2 hinzugefügt</change>
+        <change>Anzeige von Sender und Uhrzeit zu Listenansicht und Detailansicht hinzugefügt</change>
+        <change>Kleinere Layoutverbesserungen</change>
+    </release>
+     <release version="0.3" versioncode="3">
+        <change>Es gibt nun ein Aktualisierenbutton. Dies ist z.B. hilfreich wenn man vergessen hatte das WLAN anzuschalten und die Filmliste nicht geladen werden konnte.</change>
+        <change>Fehler beim Laden von Beiträgen ohne Bild behoben</change>
+    </release>
+    <release version="0.5" versioncode="5">
+       <change>Blättert man im Tabletmodus durch die Beiträge, wird die Listenansicht dementsprechend gescrollt.</change>
+       <change>Aktualisierung funktioniert nun auch, wenn inzwischen ein neuer Tag ist.</change>
+       <change>Es erscheint nun eine Fehlermeldung wenn das Gerät die Filmurl nicht öffnen kann, bspw. weil kein passender Player installiert ist.</change>
+       <change>Layout(farb)probleme unter Android 2.x behoben</change>
+    </release>
+     <release version="0.6" versioncode="6">
+       <change>Neue Funktionem zum Teilen der Film-Url</change>
+       <change>Anzeige von Live Beiträgen inkl Beschreibung</change>
+       <change>Verbesserte Bildqualität</change>
+       <change>Kopieren Button ist nun standardmäßig unsichtbar, kann über die neuen App-Einstellungen reaktiviert werden.</change>
+    </release>
+    <release version="0.7" versioncode="7">
+        <change>Suchfunktion</change>
+
+    </release>
+    <release version="0.71" versioncode="9">
+        <change>Bugfix für Android Version 2.2, behebt Absturz</change>
+        <change>Holo-Theme nun auch für alte Android Versionen</change>
+
+    </release>
+    <release version="0.9" versioncode="10">
+        <change>Bilder in Detailansicht werden wieder geladen</change>
+        <change>Zeigt nun einen Tag mehr an</change>
+        <change>(intern) Umstellung auf Gradle Build System</change>
+        <change>(intern) Umstellung auf Support Action Bar für ältere Android Geräte</change>
+    </release>
+</changelog>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+            android:title="@string/pref_display_title"
+            android:key="pref_key_display_settings">
+        <CheckBoxPreference
+                android:key="pref_hide_copyurl_button"
+                android:title="@string/pref_hide_copyurl_button"
+                android:summary="@string/pref_hide_copyurl_button_summ"
+                android:defaultValue="true"/>
+        <CheckBoxPreference
+                android:key="pref_always_show_long"
+                android:title="@string/pref_always_show_long_desc"
+                android:summary="@string/pref_always_show_long_desc_summ"
+
+                android:defaultValue="false"/>
+        <CheckBoxPreference
+                android:key="pref_reverse_list_order"
+                android:title="@string/pref_reverse_list_order_desc"
+                android:summary="@string/pref_reverse_list_order_summ"
+
+                android:defaultValue="false"/>
+        <CheckBoxPreference
+                android:key="pref_hide_live_entries"
+                android:title="@string/pref_hide_live_entries_desc"
+                android:summary="@string/pref_hide_live_entries_desc_summ"
+
+                android:defaultValue="false"/>
+       <!--
+        <CheckBoxPreference
+                android:key="pref_show_download_button"
+                android:title="@string/pref_show_download_button_desc"
+                android:summary="@string/pref_show_download_button_summ"
+
+                android:defaultValue="false"/>-->
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<searchable xmlns:android="http://schemas.android.com/apk/res/android"
+        android:label="Suche in Mediathek 1"
+        android:searchSuggestAuthority="de.janrenz.app.mediathek.SearchActivity"
+        android:searchSuggestIntentAction="android.intent.action.VIEW"
+        android:searchSettingsDescription="Suche Text"
+        android:includeInGlobalSearch="true">
+</searchable>
