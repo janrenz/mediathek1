@@ -224,18 +224,12 @@ public class ArticleFragment extends org.holoeverywhere.app.Fragment {
         String url = "http://m-service.daserste.de/appservice/1.4.2/image/video/" + this.extId + "/jpg/" + jpegWidth;
         DisplayImageOptions loadingOptions = new DisplayImageOptions.Builder()
                 .showStubImage(R.drawable.ic_stub)
-
-                        // .showImageForEmptyUri(R.drawable.ic_empty)
                 .showImageOnFail(R.drawable.ic_error)
                 .cacheInMemory()
-                //TODO Handle out of memory exceptions!
-                       // .imageScaleType(ImageScaleType.EXACTLY_STRETCHED)
-                        // .cacheOnDisc()
                 .build();
 
         ImageView image_view = (ImageView) mView
                 .findViewById(R.id.thumbnail);
-
 
         image_view.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override public void onGlobalLayout() {

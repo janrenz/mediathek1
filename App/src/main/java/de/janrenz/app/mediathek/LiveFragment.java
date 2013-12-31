@@ -390,7 +390,7 @@ public class LiveFragment extends ArticleFragment implements LoaderManager.Loade
 			Boolean showLongDesc = false;
 			try {
 				SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
-				 showLongDesc = sharedPref.getBoolean(SettingsActivity.SHOW_LONG_DESC, false);
+				 showLongDesc = sharedPref.getBoolean(SettingsActivity.SHOW_LONG_DESC, true);
 				
 			} catch (Exception e) {
 				// use the default if we cant fetch it
