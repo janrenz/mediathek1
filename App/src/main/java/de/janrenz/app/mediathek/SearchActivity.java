@@ -155,10 +155,6 @@ public class SearchActivity extends org.holoeverywhere.app.Activity implements S
 
 
     private void handleIntent(Intent intent) {
-
-        if (mMenu != null){
-            MenuItem searchMenuItem = mMenu.findItem(R.id.action_search_in_search);
-        }
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = mQuery = intent.getStringExtra(SearchManager.QUERY);
             doSearch(query);
