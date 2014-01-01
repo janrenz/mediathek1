@@ -256,8 +256,9 @@ public class MediathekActivity extends org.holoeverywhere.app.Activity implement
 
         //lets close the input field
         if (mMenu != null){
-            MenuItem searchMenuItem = mMenu.findItem(R.id.action_search);
-            searchMenuItem.collapseActionView();
+
+            MenuItem searchItem = mMenu.findItem(R.id.action_search);
+            MenuItemCompat.collapseActionView(searchItem);
             // lets open up the search intent
             Intent i = new Intent(this, SearchActivity.class);
             i.setAction(Intent.ACTION_SEARCH);

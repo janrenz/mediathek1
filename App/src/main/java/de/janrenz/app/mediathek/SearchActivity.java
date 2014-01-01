@@ -46,6 +46,8 @@ import android.support.v7.widget.SearchView;
 import java.util.ArrayList;
 import org.holoeverywhere.widget.TextView;
 
+
+
 public class SearchActivity extends org.holoeverywhere.app.Activity implements SearchView.OnQueryTextListener, LoaderManager.LoaderCallbacks<Cursor> {
 
     private SearchView searchView = null;
@@ -132,7 +134,7 @@ public class SearchActivity extends org.holoeverywhere.app.Activity implements S
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.search_actions, menu);
-        MenuItem searchItem = menu.findItem(R.id.action_search);
+        MenuItem searchItem = menu.findItem(R.id.action_search_in_search);
         SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
         searchView.setQueryHint("Suche in Mediathek…");
         searchView.setOnQueryTextListener(this);
@@ -155,7 +157,7 @@ public class SearchActivity extends org.holoeverywhere.app.Activity implements S
     private void handleIntent(Intent intent) {
 
         if (mMenu != null){
-            MenuItem searchMenuItem = mMenu.findItem(R.id.action_search);
+            MenuItem searchMenuItem = mMenu.findItem(R.id.action_search_in_search);
         }
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = mQuery = intent.getStringExtra(SearchManager.QUERY);
@@ -176,6 +178,7 @@ public class SearchActivity extends org.holoeverywhere.app.Activity implements S
     private void triggerLoad(String query, Boolean forceReload ){
         Bundle args = new Bundle();
         args.putString("query", query);
+        mQuery = query;
 
         int loaderId = 300;
         //different loader id per day by using the timestamp of the firstmobve!
@@ -185,23 +188,25 @@ public class SearchActivity extends org.holoeverywhere.app.Activity implements S
            getSupportLoaderManager().initLoader(loaderId, args, this);
         }
     }
+
     private void doSearch(String queryStr) {
         try {
             this.findViewById(R.id.progressBar).setVisibility(View.VISIBLE);
             this.findViewById(R.id.noresultsmsg).setVisibility(View.GONE);
             mGridView.setVisibility(View.GONE);
-
         }catch(Exception e){}
         triggerLoad(queryStr, true);
-        if (searchView != null){
-            searchView.clearFocus();
-        }
-
         InputMethodManager imm = (InputMethodManager)this.getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(mGridView.getApplicationWindowToken(), 0);
+        MenuItem searchItem = mMenu.findItem(R.id.action_search_in_search);
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+        if (searchView != null && searchView.isIconified()== false) {
+            searchView.clearFocus();
+            MenuItemCompat.collapseActionView(searchItem);
+        }
         getSupportActionBar().setTitle("Suche nach \"" + queryStr + "\"");
-
     }
+
     public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
         // query code
         Uri queryUri = Uri.parse("content://de.janrenz.app.mediathek.cursorloader.data");
@@ -222,7 +227,6 @@ public class SearchActivity extends org.holoeverywhere.app.Activity implements S
 
     @Override
     public void onLoadFinished(Loader<Cursor> cursorLoader, Cursor cursor) {
-
         mListAdapter.swapCursor(cursor);
         mAllItems = new ArrayList<Movie>();
 
@@ -257,7 +261,6 @@ public class SearchActivity extends org.holoeverywhere.app.Activity implements S
                 mGridView.setVisibility(View.GONE);
             }
         }catch(Exception e){}
-
     }
 
     @Override
@@ -271,19 +274,14 @@ public class SearchActivity extends org.holoeverywhere.app.Activity implements S
     /** if a user enters some text in the search field in the action bar **/
     @Override
     public boolean onQueryTextSubmit(String query) {
-        mQuery = query;
-        doSearch(query);
-        mMenu.findItem(R.id.action_search).collapseActionView();
+        if (!query.equalsIgnoreCase("")){
+            mQuery = query;
+            doSearch(query);
+        }
         return true;
     }
     @Override
     public boolean onQueryTextChange(String query) {
-        //kind of a hack to close the action view if a users clicks on the x,
-        if (query.equalsIgnoreCase("")){
-           // MenuItem searchMenuItem = mMenu.findItem(MENUSEARCHID);
-            mQuery = query;
-            triggerLoad(query, true);
-        }
         return true;
     }
 
