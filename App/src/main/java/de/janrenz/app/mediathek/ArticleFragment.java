@@ -496,7 +496,7 @@ public class ArticleFragment extends org.holoeverywhere.app.Fragment {
 
                              Uri uri = Uri.parse(videoPath);
                              DownloadManager.Request request = new DownloadManager.Request(uri);
-
+                             request.setDescription("Download durch Mediathek1");
                              request.setDestinationInExternalPublicDir(Environment.DIRECTORY_MOVIES.toString() , uri.getLastPathSegment());
                              request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI);
                              request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
