@@ -20,14 +20,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.NavUtils;
-import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.ViewPager;
-import android.support.v7.widget.SearchView;
-import android.view.Menu;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
+import android.view.Menu;
 import android.view.MenuItem;
-
 
 import java.util.ArrayList;
 
@@ -92,7 +88,7 @@ public class ArticleActivity extends org.holoeverywhere.app.Activity {
 			// getFragmentManager().beginTransaction().add(android.R.id.content,
 			// details).commit();
 		}
-
+       // mMediaRouter = MediaRouter.getInstance(getApplicationContext());
 		setContentView(R.layout.detailactivity);
 
 	}

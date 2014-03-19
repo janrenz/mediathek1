@@ -18,6 +18,7 @@ package de.janrenz.app.mediathek;
 
 
 import android.annotation.TargetApi;
+import android.app.DownloadManager;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -29,6 +30,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
@@ -51,20 +53,13 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.StringReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
-
-import org.apache.http.HttpRequestInterceptor;
 
 /**
  * Fragment that displays a news article.
@@ -484,7 +479,7 @@ public class ArticleFragment extends org.holoeverywhere.app.Fragment {
 				if (hideCopyButtonSetting == true){
 					buttonCopy.setVisibility(View.GONE);
 				}
-                /**
+
                 //set download button
                 Boolean showDownloadButtonSetting = sharedPref.getBoolean(SettingsActivity.SHOW_DOWNLOAD_BUTTON, false);
                 Button buttonDownload = (Button) mView.findViewById(R.id.buttonDownload);
@@ -502,10 +497,7 @@ public class ArticleFragment extends org.holoeverywhere.app.Fragment {
                              Uri uri = Uri.parse(videoPath);
                              DownloadManager.Request request = new DownloadManager.Request(uri);
 
-
-                             request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS.toString() , uri.getLastPathSegment());
-
-
+                             request.setDestinationInExternalPublicDir(Environment.DIRECTORY_MOVIES.toString() , uri.getLastPathSegment());
                              request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI);
                              request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
                              request.allowScanningByMediaScanner();
@@ -517,7 +509,7 @@ public class ArticleFragment extends org.holoeverywhere.app.Fragment {
 
                     });
                 }
-                */
+
 
 
 				mView.findViewById(R.id.showAfterLoadItems).setVisibility(

@@ -36,4 +36,9 @@
         <change>(intern) Umstellung auf Gradle Build System</change>
         <change>(intern) Umstellung auf Support Action Bar für ältere Android Geräte</change>
     </release>
+    <release version="0.10" versioncode="12">
+        <change>Einstellungen-Icon geändert</change>
+        <change>Experimenteles Download-Feature. Downloads können momentan nicht gestoppt werden und werden nur bei bestehender
+            WLAN-Verbindung ausgeführt. Download-Feature ("Später schauen") muss in den Einstellungen aktiviert werden.</change>
+    </release>
 </changelog>

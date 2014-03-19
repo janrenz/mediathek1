@@ -4,7 +4,7 @@ buildscript {
         maven { url 'https://raw.github.com/JakeWharton/Android-ViewPagerIndicator/repo' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.7.+'
+        classpath 'com.android.tools.build:gradle:0.9.+'
         classpath 'org.holoeverywhere:plugin:0.2.+'
     }
 }
@@ -47,6 +47,7 @@ android {
 
 dependencies {
     compile 'com.android.support:support-v4:19.0.1+'
+    compile 'com.google.android.gms:play-services:4.0.30'
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.+'
     compile 'com.viewpagerindicator:library:2.4.1@aar'
     compile files('libs/basic-http-client-android-0.88.jar')

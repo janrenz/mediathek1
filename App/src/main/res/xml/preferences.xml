@@ -26,12 +26,12 @@
                 android:summary="@string/pref_hide_live_entries_desc_summ"
 
                 android:defaultValue="false"/>
-       <!--
+
         <CheckBoxPreference
                 android:key="pref_show_download_button"
                 android:title="@string/pref_show_download_button_desc"
                 android:summary="@string/pref_show_download_button_summ"
 
-                android:defaultValue="false"/>-->
+                android:defaultValue="false"/>
     </PreferenceCategory>
 </PreferenceScreen>
