@@ -41,4 +41,7 @@
         <change>Experimenteles Download-Feature. Downloads können momentan nicht gestoppt werden und werden nur bei bestehender
             WLAN-Verbindung ausgeführt. Download-Feature ("Später schauen") muss in den Einstellungen aktiviert werden.</change>
     </release>
+    <release version="0.11" versioncode="13">
+        <change>App stürzt auf alten Geräten nicht mehr ab (Android Issue 67388). </change>
+    </release>
 </changelog>
