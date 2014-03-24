@@ -374,7 +374,7 @@ public class ArticleFragment extends org.holoeverywhere.app.Fragment {
 							int arg2, long arg3) {
 						// Integer item = s.getSelectedItemPosition();
 
-						videoPath = videoSources.get(arg2)[1];
+						String videoPath = videoSources.get(arg2)[1];
 						SharedPreferences appSettings = getActivity()
 								.getSharedPreferences("AppPreferences",
 										getActivity().MODE_PRIVATE);
@@ -497,13 +497,18 @@ public class ArticleFragment extends org.holoeverywhere.app.Fragment {
                              Uri uri = Uri.parse(videoPath);
                              DownloadManager.Request request = new DownloadManager.Request(uri);
                              request.setDescription("Download durch Mediathek1");
-                             request.setDestinationInExternalPublicDir(Environment.DIRECTORY_MOVIES.toString() , uri.getLastPathSegment());
+                             String url =  uri.getLastPathSegment();
+                             String filename = title + url.substring(url.lastIndexOf("."));
+                             request.setTitle(filename);
+                             request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS.toString() , filename);
                              request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI);
-                             request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-                             request.allowScanningByMediaScanner();
+                             if (android.os.Build.VERSION.SDK_INT >= 11){
+                                 request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+                                 request.allowScanningByMediaScanner();
+                             }
                              long reference = downloadManager.enqueue(request);
                              Toast.makeText(getActivity(),
-                             		"Download von Video gestartet",
+                             		"Download von Video '"+title+"' gestartet",
                              		Toast.LENGTH_LONG).show();
                         }
 
